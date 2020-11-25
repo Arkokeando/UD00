@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 3E52-B68A
+
+ Directorio de C:\Users\sergi\Desktop\PROSErgio\PSPSERGIO
+
+25/11/2020  22:20    <DIR>          .
+25/11/2020  22:20    <DIR>          ..
+12/11/2020  08:38               386 .classpath
+12/11/2020  08:32               368 .project
+25/11/2020  21:35    <DIR>          .settings
+25/11/2020  21:50               612 archivo_comando
+25/11/2020  22:20                 0 archivo_comando.txt
+25/11/2020  22:12    <DIR>          bin
+25/11/2020  22:19    <DIR>          src
+               4 archivos          1.366 bytes
+               5 dirs  97.455.218.688 bytes libres
