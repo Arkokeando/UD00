@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class Ejercicio3 {
+public class Ejercicio03 {
 
 	public static void main(String[] args) {
 		Runtime rt = Runtime.getRuntime();

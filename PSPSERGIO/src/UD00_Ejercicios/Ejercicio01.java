@@ -1,7 +1,7 @@
 package UD00_Ejercicios;
 import java.io.IOException;
 import java.io.InputStreamReader;
-public class Ejercicio1 {
+public class Ejercicio01 {
 
 	public static void main(String[] args) {
 		Runtime rt = Runtime.getRuntime();

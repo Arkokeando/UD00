@@ -1,6 +1,6 @@
 package UD00_Ejercicios;
 
-public class Ejercicio4 {
+public class Ejercicio04 {
 
 	public static void main(String[] args) {
 		Runtime rt = Runtime.getRuntime();
