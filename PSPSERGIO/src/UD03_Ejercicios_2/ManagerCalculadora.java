@@ -11,8 +11,8 @@ import java.net.URLConnection;
 
 public class ManagerCalculadora {
 
-	private String protocolo;
-	private String urlEndPoint;
+	private String protocolo="https://psp2021site.000webhostapp.com/";
+	private String urlEndPoint= "realizaOperacion.php";
 	private Integer apiKey;
 	private boolean estaRegistrada;
 
@@ -60,21 +60,18 @@ public class ManagerCalculadora {
 		this.estaRegistrada = estaRegistrada;
 	}
 
-	public void sumar(int a, int b){ // a + b
+	
+	public void sumar(int a, int b, int apiKeyConsulta){ // a + b
 		try {
-			//direccion web
-			protocolo = "https://psp2021site.000webhostapp.com/";
-			urlEndPoint = "realizaOperacion.php";
-			//api obligatoria de la web
-			apiKey = 223;
+			
 			//constructor de url
-			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
+			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKeyConsulta + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
 					+ "&SUMANDO_B=" + b);
 			//conexión
-			URLConnection urlCon = url.openConnection();
+			URLConnection urlCon2 = url.openConnection();
 			//Lector de la web
 			BufferedReader lector;
-			InputStream inputStream = urlCon.getInputStream();
+			InputStream inputStream = urlCon2.getInputStream();
 			lector = new BufferedReader(new InputStreamReader(inputStream));
 			//almaceno el valor de la web en el String
 			String inputLine;
@@ -90,12 +87,9 @@ public class ManagerCalculadora {
 
 	}
 
-	public void restar(int a, int b) {
+	public void restar(int a, int b, int apiKeyConsulta) {
 		try {
-			protocolo = "https://psp2021site.000webhostapp.com/";
-			urlEndPoint = "realizaOperacion.php";
-			apiKey = 223;
-			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=RESTA&MINUENDO=" + a
+			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKeyConsulta + "&TIPO_OPERACION=RESTA&MINUENDO=" + a
 					+ "&SUSTRAENDO=" + b);
 			
 			URLConnection urlCon = url.openConnection();
@@ -113,12 +107,9 @@ public class ManagerCalculadora {
 		}
 	}
 
-	public void multiplicar(int a, int b) {
+	public void multiplicar(int a, int b, int apiKeyConsulta) {
 		try {
-			protocolo = "https://psp2021site.000webhostapp.com/";
-			urlEndPoint = "realizaOperacion.php";
-			apiKey = 223;
-			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=MULTIPLICACION&OPERADOR_1=" + a
+			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKeyConsulta + "&TIPO_OPERACION=MULTIPLICACION&OPERADOR_1=" + a
 					+ "&OPERADOR_2=" + b);
 			URLConnection urlCon = url.openConnection();
 			BufferedReader lector;
