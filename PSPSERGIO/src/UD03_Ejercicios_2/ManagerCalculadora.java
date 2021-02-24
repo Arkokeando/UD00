@@ -64,10 +64,9 @@ public class ManagerCalculadora {
 		try {
 			//direccion web
 			protocolo = "https://psp2021site.000webhostapp.com/";
-			//
 			urlEndPoint = "realizaOperacion.php";
 			//api obligatoria de la web
-			apiKey = 101;
+			apiKey = 223;
 			//constructor de url
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
 					+ "&SUMANDO_B=" + b);
@@ -95,7 +94,7 @@ public class ManagerCalculadora {
 		try {
 			protocolo = "https://psp2021site.000webhostapp.com/";
 			urlEndPoint = "realizaOperacion.php";
-			apiKey = 101;
+			apiKey = 223;
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=RESTA&MINUENDO=" + a
 					+ "&SUSTRAENDO=" + b);
 			
@@ -118,7 +117,7 @@ public class ManagerCalculadora {
 		try {
 			protocolo = "https://psp2021site.000webhostapp.com/";
 			urlEndPoint = "realizaOperacion.php";
-			apiKey = 101;
+			apiKey = 223;
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=MULTIPLICACION&OPERADOR_1=" + a
 					+ "&OPERADOR_2=" + b);
 			URLConnection urlCon = url.openConnection();
