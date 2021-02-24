@@ -67,7 +67,7 @@ public class ManagerCalculadora {
 			//
 			urlEndPoint = "realizaOperacion.php";
 			//api obligatoria de la web
-			apiKey = 177;
+			apiKey = 101;
 			//constructor de url
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
 					+ "&SUMANDO_B=" + b);
