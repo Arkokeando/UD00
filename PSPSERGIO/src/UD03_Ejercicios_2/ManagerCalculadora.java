@@ -62,16 +62,24 @@ public class ManagerCalculadora {
 
 	public void sumar(int a, int b){ // a + b
 		try {
+			//direccion web
 			protocolo = "https://psp2021site.000webhostapp.com/";
+			//
 			urlEndPoint = "realizaOperacion.php";
+			//api obligatoria de la web
 			apiKey = 177;
+			//constructor de url
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
 					+ "&SUMANDO_B=" + b);
+			//conexión
 			URLConnection urlCon = url.openConnection();
+			//Lector de la web
 			BufferedReader in;
 			InputStream inputStream = urlCon.getInputStream();
 			in = new BufferedReader(new InputStreamReader(inputStream));
+			//almaceno el valor de la web en el String
 			String inputLine;
+			
 			while ((inputLine = in.readLine()) != null)
 				System.out.println(inputLine);
 			in.close();
@@ -90,6 +98,7 @@ public class ManagerCalculadora {
 			apiKey = 101;
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=RESTA&MINUENDO=" + a
 					+ "&SUSTRAENDO=" + b);
+			
 			URLConnection urlCon = url.openConnection();
 			BufferedReader in;
 			InputStream inputStream = urlCon.getInputStream();
