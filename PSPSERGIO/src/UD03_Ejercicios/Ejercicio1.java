@@ -16,7 +16,9 @@ public class Ejercicio1 {
 		URLConnection conexion = null;
 
 		try {
+			//direccion  web
 			url = new URL("https://psp2021site.000webhostapp.com/suma_parametros.php");
+			//abrir conexion
 			conexion = url.openConnection();
 			conexion.setDoOutput(true);
 			// Le pasamos los parámetros por cadena
@@ -29,7 +31,7 @@ public class Ejercicio1 {
 			bReader = new BufferedReader(new InputStreamReader(inputStream));
 			String inputLine;
 			while ((inputLine = bReader.readLine()) != null) {
-				// Borramos todas las marcas de las etiquetas HTML con el replaceAll
+			// Borramos todas las marcas de las etiquetas HTML con el replaceAll
 
 				System.out.println(inputLine.replaceAll("\\<[^>]*>", ""));
 			}

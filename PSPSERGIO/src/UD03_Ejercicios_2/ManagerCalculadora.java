@@ -74,15 +74,15 @@ public class ManagerCalculadora {
 			//conexión
 			URLConnection urlCon = url.openConnection();
 			//Lector de la web
-			BufferedReader in;
+			BufferedReader lector;
 			InputStream inputStream = urlCon.getInputStream();
-			in = new BufferedReader(new InputStreamReader(inputStream));
+			lector = new BufferedReader(new InputStreamReader(inputStream));
 			//almaceno el valor de la web en el String
 			String inputLine;
 			
-			while ((inputLine = in.readLine()) != null)
+			while ((inputLine = lector.readLine()) != null)
 				System.out.println(inputLine);
-			in.close();
+			lector.close();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -100,13 +100,13 @@ public class ManagerCalculadora {
 					+ "&SUSTRAENDO=" + b);
 			
 			URLConnection urlCon = url.openConnection();
-			BufferedReader in;
+			BufferedReader lector;
 			InputStream inputStream = urlCon.getInputStream();
-			in = new BufferedReader(new InputStreamReader(inputStream));
+			lector = new BufferedReader(new InputStreamReader(inputStream));
 			String inputLine;
-			while ((inputLine = in.readLine()) != null)
+			while ((inputLine = lector.readLine()) != null)
 				System.out.println(inputLine);
-			in.close();
+			lector.close();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -122,13 +122,13 @@ public class ManagerCalculadora {
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=MULTIPLICACION&OPERADOR_1=" + a
 					+ "&OPERADOR_2=" + b);
 			URLConnection urlCon = url.openConnection();
-			BufferedReader in;
+			BufferedReader lector;
 			InputStream inputStream = urlCon.getInputStream();
-			in = new BufferedReader(new InputStreamReader(inputStream));
+			lector = new BufferedReader(new InputStreamReader(inputStream));
 			String inputLine;
-			while ((inputLine = in.readLine()) != null)
+			while ((inputLine = lector.readLine()) != null)
 				System.out.println(inputLine);
-			in.close();
+			lector.close();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
